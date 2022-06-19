@@ -1,0 +1,148 @@
+* {
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+header {
+    background-color: #222629;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+}
+
+.Htitle {
+    color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-weight: 100px;
+    font-family: 'Economica', sans-serif;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.Cliche {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin-right: 10px;
+    color: rgb(108, 160, 102);
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    letter-spacing: 3px;
+}
+
+main {
+    background-color: #18191a;
+    height: 400px;
+    display: block;
+    padding-top: 70px;
+}
+
+.Mtitle {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Economica', sans-serif;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.SelectInfo {
+    text-align: center;
+}
+
+.sex {
+    transform: scale(2.0);
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+.pickgenderM {
+    font-weight: bold;
+    color: rgb(85, 85, 218);
+}
+
+.pickgenderFM {
+    font-weight: bold;
+    color: rgb(201, 147, 156);
+}
+
+.malewrapper {
+    text-align: center;
+    background-color: rgb(85, 85, 218);
+    height: 400px;
+}
+
+
+.femalewrapper {
+    text-align: center;
+    background-color: rgb(201, 147, 156);
+    height: 400px;
+}
+
+.agetitle {
+    padding-top: 20px;
+}
+
+.ageinfo {
+    width: 50px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #303846;
+    height: 100px;
+}
+
+.Ftitle {
+    margin-left: 10px;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+.Twitter {
+    display: flex;
+}
+
+.Git {
+    display: flex;
+}
+
+a {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+}
+
+.Tcolor:hover {
+    color: #1DA1F2;
+    text-decoration: underline;
+}
+
+.Gcolor:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+span {
+    margin-right: 5px;
+}
+
+.Sinfo {
+    list-style: none;
+    text-align: center;
+    display: flex;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-github {
+    color: black;
+}
