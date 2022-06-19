@@ -17,7 +17,7 @@
 
       </div>
       <div class="femalewrapper" v-if="femaleFlg">
-      
+
       </div>
     </main>
     <footer>
@@ -58,16 +58,14 @@ export default defineComponent({
 }
 
 header {
-  background: -moz-linear-gradient(left, #61bf23, #a6f870);
-  background: -webkit-linear-gradient(left, #61bf23, #a6f870);
-  background: linear-gradient(to right, #61bf23, #a6f870);
-  height: 80px;
+  background-color: #222629;
+  height: 70px;
   position: fixed;
   width: 100%;
 }
 
 .Htitle {
-  color: rgb(107, 107, 38);
+  color: white;
   margin-left: 10px;
   padding-top: 10px;
   font-weight: 100px;
@@ -78,19 +76,21 @@ header {
   justify-content: flex-end;
   font-size: 20px;
   margin-right: 10px;
-  color: rgb(135, 84, 47);
+  color: white;
   font-weight: bold;
+  position: relative;
+  bottom: 10px;
 }
 
 main {
-  background-color: #61bf23;
-  height: 390px;
+  background-color: #18191a;
+  height: 400px;
   display: block;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 .Mtitle {
-  color: rgb(82, 50, 27);
+  color: white;
   text-align: center;
   margin-top: 10px;
 }
@@ -106,29 +106,30 @@ main {
 
 .pickgender {
   font-weight: bold;
+  color: white;
 }
 
 .malewrapper {
   text-align: center;
   background-color: rgb(85, 85, 218);
-  height: 390px;
+  height: 400px;
 }
 
 .femalewrapper {
   text-align: center;
   background-color: rgb(201, 147, 156);
-  height: 390px;
+  height: 400px;
 }
 
 footer {
-  background-color: #a6f870;
+  background-color: #303846;
   height: 100px;
 }
 
 .Ftitle {
   margin-left: 10px;
   padding-top: 10px;
-  color: rgb(91, 29, 29);
+  color: white;
   text-align: center;
 }
 
@@ -143,12 +144,12 @@ footer {
 a {
   font-size: 25px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 a:hover {
   text-decoration: underline;
-  color: rgb(240, 17, 13);
+  color:black;
 }
 
 span {
