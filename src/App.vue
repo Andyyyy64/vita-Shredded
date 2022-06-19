@@ -6,6 +6,19 @@
       <p class="Cliche">Stay Shredded,Stay Healthy</p>
     </header>
     <main>
+      <div class="pickwrapper" v-if="!maleFlg && !femaleFlg">
+        <h1 class="Mtitle">Please Select Your Gender</h1>
+        <div class="SelectInfo">
+          <input type="radio" class="sex" @click="maleFlg = true"><span class="pickgender">male</span>
+          <input type="radio" class="sex" @click="femaleFlg = true"><span class="pickgender">female</span>
+        </div>
+      </div>
+      <div class="malewrapper" v-if="maleFlg">
+
+      </div>
+      <div class="femalewrapper" v-if="femaleFlg">
+      
+      </div>
     </main>
     <footer>
       <h1 class="Ftitle">about me</h1>
@@ -22,6 +35,21 @@
     </footer>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  data() {
+    return {
+      age: "",
+      height: "",
+      maleFlg: false,
+      femaleFlg: false
+    }
+  },
+})
+</script>
 
 <style>
 * {
@@ -42,7 +70,7 @@ header {
   color: rgb(107, 107, 38);
   margin-left: 10px;
   padding-top: 10px;
-  z-index: -1;
+  font-weight: 100px;
 }
 
 .Cliche {
@@ -51,11 +79,45 @@ header {
   font-size: 20px;
   margin-right: 10px;
   color: rgb(135, 84, 47);
+  font-weight: bold;
 }
 
 main {
   background-color: #61bf23;
-  height: 500px;
+  height: 390px;
+  display: block;
+  padding-top: 80px;
+}
+
+.Mtitle {
+  color: rgb(82, 50, 27);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.SelectInfo {
+  text-align: center;
+}
+
+.sex {
+  transform: scale(2.0);
+  margin: 20px 20px;
+}
+
+.pickgender {
+  font-weight: bold;
+}
+
+.malewrapper {
+  text-align: center;
+  background-color: rgb(85, 85, 218);
+  height: 390px;
+}
+
+.femalewrapper {
+  text-align: center;
+  background-color: rgb(201, 147, 156);
+  height: 390px;
 }
 
 footer {
@@ -83,27 +145,19 @@ a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
-a:hover{
+
+a:hover {
   text-decoration: underline;
+  color: rgb(240, 17, 13);
 }
-span{
+
+span {
   margin-right: 5px;
 }
+
 .Sinfo {
   list-style: none;
   text-align: center;
   display: flex;
 }
 </style>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  data() {
-    return {
-
-    }
-  }
-})
-</script>
