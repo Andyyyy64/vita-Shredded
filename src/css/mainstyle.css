@@ -8,6 +8,7 @@ header {
     height: 70px;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .Htitle {
@@ -84,11 +85,15 @@ main {
 
 .agetitle {
     padding-top: 20px;
+    font-family: 'Economica', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .ageinfo {
     width: 50px;
     margin-top: 10px;
+    font-family: 'Economica', sans-serif;
 }
 
 footer {

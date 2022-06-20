@@ -44,7 +44,7 @@ export default defineComponent({
     malewrapper,
     femalewrapper
   },
-  data(){
+  data() {
     return {
       maleFlg: false,
       femaleFlg: false
