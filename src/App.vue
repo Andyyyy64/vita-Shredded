@@ -17,6 +17,7 @@
       </div>
       <malewrapper v-if="maleFlg"></malewrapper>
       <femalewrapper v-if="femaleFlg"></femalewrapper>
+      
     </main>
     <footer>
       <h1 class="Ftitle">about me</h1>
@@ -35,6 +36,7 @@
 </template>
 
 <script lang="ts">
+
 import malewrapper from "./components/malewrapper.vue"
 import femalewrapper from "./components/femalewrapper.vue"
 import { defineComponent } from "vue";
@@ -42,14 +44,15 @@ import { defineComponent } from "vue";
 export default defineComponent({
   components: {
     malewrapper,
-    femalewrapper
+    femalewrapper,
   },
-  data() {
+  data(): { maleFlg: boolean; femaleFlg: boolean; } {
     return {
       maleFlg: false,
-      femaleFlg: false
+      femaleFlg: false,
     }
   },
+
 })
 </script>
 

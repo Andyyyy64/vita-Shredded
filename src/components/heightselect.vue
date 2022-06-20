@@ -2,7 +2,6 @@
     <div class="Hinfo">
         <h2 class="heighttitle">height</h2>
         <input type="text" v-model="heightinfo" placeholder="CM" class="heightinput">
-        <p>{{ heightinfo }}</p>
     </div>
 </template>
 

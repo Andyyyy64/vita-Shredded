@@ -1,15 +1,22 @@
-<template >
+<template>
     <div class="malewrapper">
-        <h1 class="statustitle">Pick your status</h1>
-        <h2 class="agetitle">Age</h2>
-        <ageselect></ageselect>
-        <heightselect></heightselect>
-        <activityselect></activityselect>
-        <goalselect></goalselect>
+        <div class="userstatus" v-if="!calcFlg">
+            <h1 class="statustitle">Pick your status</h1>
+            <h2 class="agetitle">Age</h2>
+            <ageselect></ageselect>
+            <heightselect></heightselect>
+            <activityselect></activityselect>
+            <goalselect></goalselect>
+        </div>
+        <button class="macroBtn M" @click="Calcmacro">Calculate Macros</button>
+        <macrowrapper v-if="calcFlg"></macrowrapper>
+
+
     </div>
 </template>
 
 <script lang="ts">
+import macrowrapper from "./macrowrapper.vue";
 import goalselect from "./goalselect.vue"
 import activityselect from "./activityselect.vue";
 import heightselect from "./heightselect.vue";
@@ -21,9 +28,21 @@ export default defineComponent({
         ageselect,
         heightselect,
         activityselect,
-        goalselect
+        goalselect,
+        macrowrapper,
     },
     name: "MaleWrapper",
+    data() {
+        return {
+            calcFlg: false
+        }
+    },
+    methods: {
+        Calcmacro() {
+            this.calcFlg = true
+            this.$store.store.maleFlg = true
+        }
+    }
 })
 </script>
 
@@ -33,5 +52,29 @@ export default defineComponent({
     font-weight: bold;
     padding-top: 20px;
     font-size: 50px;
+}
+
+.malewrapper {
+    padding-right: 360px;
+}
+
+.macroBtn {
+    font-family: 'Economica', sans-serif;
+    float: right;
+    font-size: 50px;
+    cursor: pointer;
+    position: relative;
+    bottom: 200px;
+    left: 150px;
+}
+
+.M:hover {
+    color: rgb(85, 85, 218);
+    background-color: black;
+    opacity: 0.7;
+}
+
+.M:active {
+    opacity: 1;
 }
 </style>
