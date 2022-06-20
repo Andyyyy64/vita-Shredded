@@ -15,14 +15,8 @@
           <input type="radio" class="sex" @click="femaleFlg = true"><span class="pickgenderFM">female</span>
         </div>
       </div>
-      <div class="malewrapper" v-if="maleFlg">
-        <h2 class="agetitle">Age</h2>
-        <ageselect></ageselect>
-      </div>
-      <div class="femalewrapper" v-if="femaleFlg">
-        <h2 class="agetitle">Age</h2>
-        <ageselect></ageselect>
-      </div>
+      <malewrapper v-if="maleFlg"></malewrapper>
+      <femalewrapper v-if="femaleFlg"></femalewrapper>
     </main>
     <footer>
       <h1 class="Ftitle">about me</h1>
@@ -41,17 +35,17 @@
 </template>
 
 <script lang="ts">
-import ageselect from "./components/ageselect.vue"
+import malewrapper from "./components/malewrapper.vue"
+import femalewrapper from "./components/femalewrapper.vue"
 import { defineComponent } from "vue";
 
 export default defineComponent({
   components: {
-    ageselect
+    malewrapper,
+    femalewrapper
   },
-  data(): { age: string; height: string; maleFlg: boolean; femaleFlg: boolean; } {
+  data(){
     return {
-      age: "",
-      height: "",
       maleFlg: false,
       femaleFlg: false
     }

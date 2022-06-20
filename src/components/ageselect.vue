@@ -96,9 +96,5 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: "AgeSelect",
-  data() {
-    return {
-    }
-  },
 })
 </script>

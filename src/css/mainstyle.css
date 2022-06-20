@@ -35,7 +35,7 @@ header {
 
 main {
     background-color: #18191a;
-    height: 400px;
+    height: 500px;
     display: block;
     padding-top: 70px;
 }
@@ -72,14 +72,14 @@ main {
 .malewrapper {
     text-align: center;
     background-color: rgb(85, 85, 218);
-    height: 400px;
+    height: 500px;
 }
 
 
 .femalewrapper {
     text-align: center;
     background-color: rgb(201, 147, 156);
-    height: 400px;
+    height: 500px;
 }
 
 .agetitle {
