@@ -94,6 +94,7 @@ main {
     width: 50px;
     margin-top: 10px;
     font-family: 'Economica', sans-serif;
+    cursor: pointer;
 }
 
 footer {

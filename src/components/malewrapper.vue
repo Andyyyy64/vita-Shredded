@@ -4,10 +4,12 @@
         <h2 class="agetitle">Age</h2>
         <ageselect></ageselect>
         <heightselect></heightselect>
+        <activityselect></activityselect>
     </div>
 </template>
 
 <script lang="ts">
+import activityselect from "./activityselect.vue";
 import heightselect from "./heightselect.vue";
 import ageselect from "./ageselect.vue"
 import { defineComponent } from "vue";
@@ -15,7 +17,8 @@ import { defineComponent } from "vue";
 export default defineComponent({
     components: {
         ageselect,
-        heightselect
+        heightselect,
+        activityselect
     },
     name: "MaleWrapper",
 })
