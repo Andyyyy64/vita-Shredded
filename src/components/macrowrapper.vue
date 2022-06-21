@@ -29,5 +29,6 @@ export default defineComponent({
 .kcalinfo {
     font-family: 'Economica', sans-serif;
     font-size: 70px;
+    margin-top: 20px;
 }
 </style>

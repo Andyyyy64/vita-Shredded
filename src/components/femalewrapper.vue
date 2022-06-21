@@ -1,10 +1,11 @@
 <template >
     <div class="femalewrapper">
-        <div v-if="!calcFlg">
+        <div class="userstatus" v-if="!calcFlg">
             <h1 class="statustitle">Pick your status</h1>
             <h2 class="agetitle">Age</h2>
             <ageselect></ageselect>
             <heightselect></heightselect>
+            <weightselect></weightselect>
             <activityselect></activityselect>
             <goalselect></goalselect>
         </div>
@@ -14,6 +15,7 @@
 </template>
 
 <script lang="ts">
+import weightselect from "./weightselect.vue";
 import macrowrapper from "./macrowrapper.vue";
 import goalselect from "./goalselect.vue"
 import activityselect from "./activityselect.vue";
@@ -27,7 +29,8 @@ export default defineComponent({
         heightselect,
         activityselect,
         goalselect,
-        macrowrapper
+        macrowrapper,
+        weightselect
     },
     name: "FemaleWrapper",
     data() {
@@ -38,7 +41,6 @@ export default defineComponent({
     methods: {
         Calcmacro() {
             this.calcFlg = true
-            this.$store.store.maleFlg = true
         }
     }
 })

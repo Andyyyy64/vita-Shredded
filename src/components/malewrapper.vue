@@ -5,17 +5,17 @@
             <h2 class="agetitle">Age</h2>
             <ageselect></ageselect>
             <heightselect></heightselect>
+            <weightselect></weightselect>
             <activityselect></activityselect>
             <goalselect></goalselect>
         </div>
         <button class="macroBtn M" @click="Calcmacro">Calculate Macros</button>
         <macrowrapper v-if="calcFlg"></macrowrapper>
-
-
     </div>
 </template>
 
 <script lang="ts">
+import weightselect from "./weightselect.vue";
 import macrowrapper from "./macrowrapper.vue";
 import goalselect from "./goalselect.vue"
 import activityselect from "./activityselect.vue";
@@ -30,6 +30,7 @@ export default defineComponent({
         activityselect,
         goalselect,
         macrowrapper,
+        weightselect
     },
     name: "MaleWrapper",
     data() {
@@ -40,7 +41,6 @@ export default defineComponent({
     methods: {
         Calcmacro() {
             this.calcFlg = true
-            this.$store.store.maleFlg = true
         }
     }
 })
