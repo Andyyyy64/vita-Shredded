@@ -2,7 +2,6 @@
     <div class="malewrapper">
         <div class="userstatus" v-if="!calcFlg">
             <h1 class="statustitle">Pick your status</h1>
-            <h2 class="agetitle">Age</h2>
             <ageselect></ageselect>
             <heightselect></heightselect>
             <weightselect></weightselect>
@@ -33,7 +32,7 @@ export default defineComponent({
         weightselect
     },
     name: "MaleWrapper",
-    data() {
+    data(): { calcFlg: boolean; } {
         return {
             calcFlg: false
         }
@@ -41,6 +40,7 @@ export default defineComponent({
     methods: {
         Calcmacro() {
             this.calcFlg = true
+            this.$store.state.totalkcal = (10 * this.$store.state.weightinfo + 6.25 * this.$store.state.heightinfo - 5 * this.$store.state.ageinfo + 5) * this.$store.state.picked
         }
     }
 })

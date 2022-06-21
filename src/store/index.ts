@@ -1,14 +1,18 @@
 import { createStore } from 'vuex'
-export interface State{
-  maleFlg:boolean
-}
 
-export default createStore<State>({
+export default createStore({
   state: {
-    maleFlg:false
+    ageinfo: "",
+    weightinfo: "",
+    heightinfo: "",
+    protein: "",
+    carbohydrate: "",
+    fat: "",
+    totalkcal: "",
+    picked:""
   },
   getters: {
-    
+
   },
   mutations: {
   },

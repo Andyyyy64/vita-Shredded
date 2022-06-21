@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <h1 class="macroinfo">Protein 140g</h1>
-        <h1 class="macroinfo">Carbohydrate 300g</h1>
-        <h1 class="macroinfo">Fat 70g</h1>
-        <h1 class="kcalinfo">Total 2390kcal</h1>
+        <h1 class="macroinfo">Protein {{ this.$store.state.protein }}g</h1>
+        <h1 class="macroinfo">Carbohydrate {{ this.$store.state.carbohydrate }}g</h1>
+        <h1 class="macroinfo">Fat {{ this.$store.state.fat }}g</h1>
+        <h1 class="kcalinfo">Total {{this.$store.state.totalkcal}}kcal</h1>
     </div>
 </template>
 
@@ -14,6 +14,10 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: "MacroWrapper",
+    data() {
+        return {
+        }
+    }
 })
 </script>
 

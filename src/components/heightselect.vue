@@ -1,7 +1,7 @@
 <template>
     <div class="Hinfo">
         <h2 class="heighttitle">height</h2>
-        <input type="text" v-model="heightinfo" placeholder="CM" class="heightinput">
+        <input type="text" v-model.number="this.$store.state.heightinfo" placeholder="CM" class="heightinput">
     </div>
 </template>
 
@@ -13,7 +13,6 @@ export default defineComponent({
     name: "HeightSelect",
     data() {
         return {
-            heightinfo: ""
         }
     }
 })

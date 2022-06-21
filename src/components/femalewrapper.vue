@@ -2,7 +2,6 @@
     <div class="femalewrapper">
         <div class="userstatus" v-if="!calcFlg">
             <h1 class="statustitle">Pick your status</h1>
-            <h2 class="agetitle">Age</h2>
             <ageselect></ageselect>
             <heightselect></heightselect>
             <weightselect></weightselect>
@@ -33,7 +32,7 @@ export default defineComponent({
         weightselect
     },
     name: "FemaleWrapper",
-    data() {
+    data(): { calcFlg: boolean; } {
         return {
             calcFlg: false
         }

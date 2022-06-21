@@ -1,7 +1,7 @@
 <template>
     <div class="Winfo">
         <h2 class="weighttitle">weight</h2>
-        <input type="text" v-model="weightinfo" placeholder="KG" class="weightinput">
+        <input type="text" v-model.number="this.$store.state.weightinfo" placeholder="KG" class="weightinput">
     </div>
 </template>
 
@@ -13,7 +13,6 @@ export default defineComponent({
     name: "WeightSelect",
     data() {
         return {
-            weightinfo: ""
         }
     }
 })
