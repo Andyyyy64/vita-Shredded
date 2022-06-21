@@ -4,6 +4,7 @@
         <h1 class="macroinfo">Carbohydrate {{ this.$store.state.carbohydrate }}g</h1>
         <h1 class="macroinfo">Fat {{ this.$store.state.fat }}g</h1>
         <h1 class="kcalinfo">Total {{this.$store.state.totalkcal}}kcal</h1>
+        
     </div>
 </template>
 

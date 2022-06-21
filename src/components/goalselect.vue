@@ -2,9 +2,9 @@
     <div class="c">
         <h2 class="goaltitle">Goal</h2>
         <div class="radiocontaier">
-            <input type="radio" class="goal" name="Goal"><span>Lose Weight</span>
-            <input type="radio" class="goal" name="Goal"><span>Maintain</span>
-            <input type="radio" class="goal" name="Goal"><span>Gain Weight</span>
+            <input type="radio" class="goal" name="Goal" id="option2" value="250" v-model.number="this.$store.state.pickedgoal"><label for="250"></label><span>Lose Weight</span>
+            <input type="radio" class="goal" name="Goal" id="option2" value="0" v-model.number="this.$store.state.pickedgoal"><label for=""></label><span>Maintain</span>
+            <input type="radio" class="goal" name="Goal" id="option2" value="300" v-model.number="this.$store.state.pickedgoal"><label for="300"></label><span>Gain Weight</span>
         </div>
     </div>
 </template>

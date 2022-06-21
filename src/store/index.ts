@@ -1,6 +1,19 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+export interface State {
+  ageinfo:string
+  weightinfo:string
+  heightinfo:string
+  protein:string
+  fat:string
+  totalkcal:string
+  picked:string
+  pickedgoal:string
+  carbohydrate:string
+  calcFlg:boolean
+}
+
+export default createStore<State>({
   state: {
     ageinfo: "",
     weightinfo: "",
@@ -9,7 +22,9 @@ export default createStore({
     carbohydrate: "",
     fat: "",
     totalkcal: "",
-    picked:""
+    picked: "",
+    pickedgoal: "",
+    calcFlg: false
   },
   getters: {
 
