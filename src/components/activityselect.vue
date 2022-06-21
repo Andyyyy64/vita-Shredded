@@ -2,10 +2,14 @@
     <div class="acitivecontainer">
         <h2 class="Activetitle">Activity Levels</h2>
         <div class="radiocontaier">
-            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.2" v-model.number="this.$store.state.picked"><label for="1.2"></label><span>Sedentary</span>
-            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.375" v-model.number="this.$store.state.picked"><label for="1.375"></label><span>Light Activity</span>
-            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.55" v-model.number="this.$store.state.picked"><label for="1.55"></label><span>Moderate Activity</span>
-            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.725" v-model.number="this.$store.state.picked"><label for="1.725"></label><span>Active</span>
+            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.2"
+                v-model.number="this.$store.state.picked"><span>Sedentary</span>
+            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.375"
+                v-model.number="this.$store.state.picked"><span>Light Activity</span>
+            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.55"
+                v-model.number="this.$store.state.picked"><span>Moderate Activity</span>
+            <input type="radio" class="ActiveL" name="Activity" id="option1" value="1.725"
+                v-model.number="this.$store.state.picked"><span>Active</span>
         </div>
     </div>
 </template>
