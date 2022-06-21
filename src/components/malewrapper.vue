@@ -16,10 +16,10 @@
 <script lang="ts">
 import weightselect from "./weightselect.vue";
 import macrowrapper from "./macrowrapper.vue";
-import goalselect from "./goalselect.vue"
+import goalselect from "./goalselect.vue";
 import activityselect from "./activityselect.vue";
 import heightselect from "./heightselect.vue";
-import ageselect from "./ageselect.vue"
+import ageselect from "./ageselect.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -40,7 +40,10 @@ export default defineComponent({
     methods: {
         Calcmacro() {
             this.calcFlg = true
-            this.$store.state.totalkcal = (10 * this.$store.state.weightinfo + 6.25 * this.$store.state.heightinfo - 5 * this.$store.state.ageinfo + 5) * this.$store.state.picked
+            this.$store.state.totalkcal = Math.round((10 * this.$store.state.weightinfo + 6.25 * this.$store.state.heightinfo - 5 * this.$store.state.ageinfo + 5) * this.$store.state.picked)
+            this.$store.state.protein = Math.round((this.$store.state.weightinfo * 2))
+            this.$store.state.fat = Math.round((this.$store.state.totalkcal * 0.25) / 9)
+            this.$store.state.carbohydrate = Math.round((this.$store.state.totalkcal - (this.$store.state.protein * 4) - (this.$store.state.fat * 9)) / 4)
         }
     }
 })
