@@ -1,7 +1,7 @@
 <template>
     <div class="malewrapper">
         <div class="userstatus" v-if="!calcFlg">
-            <h1 class="statustitle">Pick your status</h1>
+            <h1 class="statustitle">Choose your status</h1>
             <ageselect></ageselect>
             <heightselect></heightselect>
             <weightselect></weightselect>

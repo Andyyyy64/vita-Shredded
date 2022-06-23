@@ -10,7 +10,6 @@ declare module '@vue/runtime-core' {
     ageinfo: number
     weightinfo: number
     totalkcal: number
-    count: number
   }
 
   interface ComponentCustomProperties {

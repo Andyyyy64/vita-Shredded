@@ -17,7 +17,7 @@
       </div>
       <malewrapper v-if="maleFlg"></malewrapper>
       <femalewrapper v-if="femaleFlg"></femalewrapper>
-      
+
     </main>
     <footer>
       <h1 class="Ftitle">about me</h1>
