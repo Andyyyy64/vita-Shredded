@@ -15,12 +15,12 @@
 </template>
 
 <script lang="ts">
-import weightselect from "./weightselect.vue";
-import macrowrapper from "./macrowrapper.vue";
-import goalselect from "./goalselect.vue";
-import activityselect from "./activityselect.vue";
-import heightselect from "./heightselect.vue";
-import ageselect from "./ageselect.vue";
+import weightselect from "../components/weightselect.vue";
+import macrowrapper from "../components/macrowrapper.vue";
+import goalselect from "../components/goalselect.vue";
+import activityselect from "../components/activityselect.vue";
+import heightselect from "../components/heightselect.vue";
+import ageselect from "../components/ageselect.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -79,5 +79,12 @@ export default defineComponent({
 
 .F:active {
     opacity: 1;
+}
+
+@media screen and (max-width:480px) {
+    .macroBtn {
+        margin-top: 250px;
+        margin-right: 270px;
+    }
 }
 </style>

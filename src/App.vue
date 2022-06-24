@@ -11,12 +11,10 @@
       <div class="pickwrapper" v-if="!maleFlg && !femaleFlg">
         <h1 class="Mtitle">Please Select Your Gender</h1>
         <div class="SelectInfo">
-          <input type="radio" class="sex" @click="maleFlg = true"><span class="pickgenderM">male</span>
-          <input type="radio" class="sex" @click="femaleFlg = true"><span class="pickgenderFM">female</span>
+          <input type="radio" class="sex" @click="maleBtn"><span class="pickgenderM">male</span>
+          <input type="radio" class="sex" @click="femaleBtn"><span class="pickgenderFM">female</span>
         </div>
       </div>
-      <malewrapper v-if="maleFlg"></malewrapper>
-      <femalewrapper v-if="femaleFlg"></femalewrapper>
 
     </main>
     <footer>
@@ -36,15 +34,13 @@
 </template>
 
 <script lang="ts">
-
-import malewrapper from "./components/malewrapper.vue"
-import femalewrapper from "./components/femalewrapper.vue"
 import { defineComponent } from "vue";
+import { useRouter } from 'vue-router';
+import router from "./router";
 
 export default defineComponent({
-  components: {
-    malewrapper,
-    femalewrapper,
+  setup() {
+    const router = useRouter()
   },
   data(): { maleFlg: boolean; femaleFlg: boolean; } {
     return {
@@ -52,6 +48,17 @@ export default defineComponent({
       femaleFlg: false,
     }
   },
+  methods: {
+    maleBtn() {
+      this.maleFlg = true
+      router.push("/male")
+    },
+    femaleBtn() {
+      this.femaleFlg = true
+      router.push("/female")
+    }
+  }
+
 
 })
 </script>
