@@ -35,4 +35,10 @@ export default defineComponent({
     font-size: 70px;
     margin-top: 20px;
 }
+@media screen and (max-width:480px){
+    .macroinfo{
+        position: relative;
+        right: 150px;
+    }
+}
 </style>

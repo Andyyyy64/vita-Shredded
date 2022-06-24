@@ -1,4 +1,5 @@
 <template>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <div class="malewrapper">
         <div class="userstatus" v-if="!calcFlg">
             <h1 class="statustitle">Choose your status</h1>
@@ -80,5 +81,11 @@ export default defineComponent({
 
 .M:active {
     opacity: 1;
+}
+@media screen and (max-width:480px){
+    .macroBtn{
+        margin-top: 250px;
+        margin-right: 270px;
+    }
 }
 </style>

@@ -157,3 +157,17 @@ span {
 .fa-github {
     color: black;
 }
+
+@media screen and (max-width:480px) {
+    .malewrapper {
+        height: 2000px;
+        width: 400px;
+    }
+    footer{
+        position: fixed;
+        /*←絶対位置*/
+        bottom: 0;
+        /*下に固定*/
+    }
+
+}
